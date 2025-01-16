@@ -1,21 +1,30 @@
 package src.Main;
+
+
+import static spark.Spark.port;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import static spark.Spark.*;
+
 
 public class WebAppAlmacenes {
 
     public static void main(String[] args) {
+        
+        // Configurar el puerto y la IP para Spark
+        port(4567);
+        ipAddress("0.0.0.0");
+
         // Configurar la base de datos
         String jdbcURL = "jdbc:mysql://18.208.216.174:3306/Almacenes_Crear";
         String dbUser = "admin"; // Usuario remoto de MySQL
         String dbPassword = "Admin123.";
 
         // Rutas de la aplicación web
-        staticFiles.location("/templates"); // Ruta de los archivos estáticos (HTML)
+        //staticFiles.location("/templates"); // Ruta de los archivos estáticos (HTML)
 
         // Ruta principal
         get("/", (req, res) -> {

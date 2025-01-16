@@ -1,0 +1,29 @@
+{
+    "java.project.outputPath": "target/classes",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar" // Incluye cualquier JAR en la carpeta lib/
+    ],
+    "java.dependency.syncWithFolder": true,
+    "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+    "java.format.settings.profile": "GoogleStyle",
+    "java.debug.settings.console": "integratedTerminal",
+    "editor.formatOnSave": true,
+    "files.exclude": {
+        "target": true,
+        "**/*.class": true,
+        ".classpath": true,
+        ".project": true
+    },
+    "files.associations": {
+        "*.html": "html",
+        "*.java": "java"
+    },
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-17",
+            "path": "/usr/lib/jvm/java-17-openjdk", // Ruta al JDK 17 en tu sistema
+            "default": true
+        }
+    ],
+    "maven.executable.path": "mvn" // Asegúrate de que Maven esté instalado y accesible desde PATH
+}

@@ -1,4 +1,4 @@
-package src.Main;
+package src.DAO;
 
 // DAO/AlmacenDAO.java
 

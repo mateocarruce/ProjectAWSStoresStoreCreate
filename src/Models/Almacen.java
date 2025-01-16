@@ -1,4 +1,4 @@
-
+package src.Models;
 // Models/Almacen.java
 public class Almacen {
     private int id;
