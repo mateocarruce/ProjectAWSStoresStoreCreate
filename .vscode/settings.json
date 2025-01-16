@@ -25,5 +25,6 @@
             "default": true
         }
     ],
-    "maven.executable.path": "mvn" // Asegúrate de que Maven esté instalado y accesible desde PATH
+    "maven.executable.path": "mvn",
+    "java.configuration.updateBuildConfiguration": "interactive" // Asegúrate de que Maven esté instalado y accesible desde PATH
 }

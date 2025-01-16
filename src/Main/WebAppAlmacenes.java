@@ -1,12 +1,15 @@
 package src.Main;
 
 
-import static spark.Spark.port;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+
+import static spark.Spark.get;
+import static spark.Spark.ipAddress;
+import static spark.Spark.port;
+import static spark.Spark.post;
 
 
 
@@ -28,19 +31,18 @@ public class WebAppAlmacenes {
 
         // Ruta principal
         get("/", (req, res) -> {
-            return """
-                <h1>Crear un Almacén</h1>
-                <form action="/crear" method="POST">
-                    <label>Nombre:</label><br>
-                    <input type="text" name="nombre" required><br>
-                    <label>Dirección:</label><br>
-                    <input type="text" name="direccion" required><br>
-                    <label>Capacidad:</label><br>
-                    <input type="number" name="capacidad" required><br>
-                    <button type="submit">Crear Almacén</button>
-                </form>
-            """;
+            return "<h1>Crear un Almacén</h1>" +
+                   "<form action=\"/crear\" method=\"POST\">" +
+                   "<label>Nombre:</label><br>" +
+                   "<input type=\"text\" name=\"nombre\" required><br>" +
+                   "<label>Dirección:</label><br>" +
+                   "<input type=\"text\" name=\"direccion\" required><br>" +
+                   "<label>Capacidad:</label><br>" +
+                   "<input type=\"number\" name=\"capacidad\" required><br>" +
+                   "<button type=\"submit\">Crear Almacén</button>" +
+                   "</form>";
         });
+        
 
         // Ruta para manejar el formulario de creación
         post("/crear", (req, res) -> {
